@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zênite UI | FrameWork</title>
+  <link rel="stylesheet" href="../zenite-ui/zenite.css">
+</head>
+
+<body>
+
+  <div class="container" style="max-width: 850px; padding-top: 1rem; padding-bottom: 3rem;">
+
+    <header>
+      <nav>
+        <a href="#" class="brand">Zênite UI</a>
+        <a href="#" class="active">Demo</a>
+        <a href="https://github.com/YuriLucas7/ZeniteFramework" target="_blank">GitHub</a>
+
+        <div style="display: flex; align-items: center; gap: 0.5rem; margin-left: 1rem;">
+          <svg class="sun-icon" xmlns="☀️" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+
+          <label class="switch" style="margin: 0;">
+            <input type="checkbox" id="theme-toggle" checked>
+            <span class="slider"></span>
+          </label>
+
+          <svg class="moon-icon" xmlns="🌕" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </div>
+      </nav>
+    </header>
+
+    <div style="margin-top: 2rem; margin-bottom: 3rem;">
+      <h1>Demonstração do Zênite UI</h1>
+      <p>Uma montra da formatação do nosso framework em ação, inspirada na simplicidade e elegância das melhores
+        documentações da web.</p>
+
+    </div>
+
+    <div class="container" style="max-width: 850px; padding-top: 1rem; padding-bottom: 3rem;"></div>
+
+    <main>
+      <h2>Basic Typography</h2>
+      <p>Toda a tipografia utiliza a mesma hierarquia visual. A fonte base foi aumentada para facilitar a leitura em
+        todos os dispositivos.</p>
+
+      <h1>Heading 1 <code><mark>3rem</mark></code></h1>
+      <h2>Heading 2 <code><mark>2.6rem</mark></code></h2>
+      <h3>Heading 3 <code><mark>2rem</mark></code></h3>
+      <h4>Heading 4 <code><mark>1.44rem</mark></code></h4>
+      <h5>Heading 5 <code><mark>1.15rem</mark></code></h5>
+      <h6>Heading 6 <code><mark>0.96rem</mark></code></h6>
+
+      <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;</code></pre>
+
+      <h3>Links & Botões</h3>
+      <p>
+        <a href="#">Sou uma hiperligação</a>
+      </p>
+      <div class="button-group">
+        <button class="button">Sou um botão principal</button>
+        <a href="#" class="button button-outline">Sou um botão com outline</a>
+      </div>
+
+      <pre><code>&lt;a href="#"&gt;Sou uma hiperligação&lt;/a&gt;
+
+&lt;div class="button-group"&gt;
+  &lt;button class="button"&gt;Sou um botão principal&lt;/button&gt;
+  &lt;a href="#" class="button button-outline"&gt;Sou um botão com outline&lt;/a&gt;
+&lt;/div&gt;</code></pre>
+
+      <h3>Outros elementos de texto</h3>
+      <ul>
+        <li>O padrão de texto como <b>negrito</b>, <i>itálico</i> e <u>sublinhado</u>.</li>
+        <li><mark>Texto destacado</mark> usando a tag mark.</li>
+        <li>Adicionando <code>código inline</code> usando a tag code.</li>
+        <li>Mostrando atalhos de teclado como <kbd>ALT+F4</kbd> com a tag kbd.</li>
+      </ul>
+
+      <pre><code>&lt;b&gt;Texto em negrito&lt;/b&gt;
+&lt;i&gt;Texto em itálico&lt;/i&gt;
+&lt;u&gt;Texto sublinhado&lt;/u&gt;
+&lt;mark&gt;Texto destacado&lt;/mark&gt;
+&lt;code&gt;Código inline&lt;/code&gt;
+&lt;kbd&gt;ALT+F4&lt;/kbd&gt;</code></pre>
+
+      <h3>Listas e Citações</h3>
+      <ol>
+        <li>Faça isto</li>
+        <li>Faça aquilo</li>
+        <li>Faça outra coisa</li>
+      </ol>
+
+      <blockquote>
+        <p>"A simplicidade é o último grau de sofisticação."</p>
+        <p><cite>– Leonardo da Vinci</cite></p>
+      </blockquote>
+
+      <pre><code>&lt;ol&gt;
+  &lt;li&gt;Faça isto&lt;/li&gt;
+  &lt;li&gt;Faça aquilo&lt;/li&gt;
+  &lt;li&gt;Faça outra coisa&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;"A simplicidade é o último grau de sofisticação."&lt;/p&gt;
+  &lt;p&gt;&lt;cite&gt;– Leonardo da Vinci&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+      <h2>Outros Elementos HTML</h2>
+      <p>Existem outros elementos HTML que são formatados automaticamente no Zênite UI.</p>
+
+      <h3>Caixa de Aviso (Notice box)</h3>
+      <p class="notice">Esta é uma caixa de aviso. É muito útil para destacar pequenos pedaços de informação. Bom, não
+        é?</p>
+
+      <pre><code>&lt;p class="notice"&gt;Esta é uma caixa de aviso. É muito útil para destacar pequenos pedaços de informação. Bom, não é?&lt;/p&gt;</code></pre>
+
+      <h3>Aside (Painel Lateral)</h3>
+
+      <aside>
+        <p><b>Aside</b></p>
+        <p>Este é um <code>aside</code>, ele flutua para a direita e destaca-se ligeiramente do texto principal.</p>
+      </aside>
+
+      <p>O painel lateral (aside) é perfeito para exibir informações secundárias, como links rápidos, anúncios ou
+        detalhes do autor, sem interromper o fluxo de leitura do conteúdo principal. O nosso framework lida com a
+        flutuação automaticamente, garantindo que em ecrãs de telemóvel ele se ajuste para ocupar toda a largura da tela
+        e manter a harmonia do layout.</p>
+
+      <pre style="clear: both; margin-top: 2rem;"><code>&lt;aside&gt;
+  &lt;p&gt;&lt;b&gt;Aside&lt;/b&gt;&lt;/p&gt;
+  &lt;p&gt;Este é um &lt;code&gt;aside&lt;/code&gt;, ele flutua para a direita e destaca-se ligeiramente do texto principal.&lt;/p&gt;
+&lt;/aside&gt;</code></pre>
+
+      <article>
+        <h3>Este é um Article</h3>
+        <p>A tag article deve ser usada para agrupar conteúdos independentes e autossuficientes, como uma postagem de
+          blog, uma notícia ou um comentário num fórum. O nosso framework garante que o espaçamento interno e externo
+          seja perfeito para uma leitura confortável em qualquer dispositivo.</p>
+      </article>
+
+      <pre><code>&lt;article&gt;
+  &lt;h3&gt;Este é um Article&lt;/h3&gt;
+  &lt;p&gt;A tag article deve ser usada para agrupar conteúdos independentes...&lt;/p&gt;
+&lt;/article&gt;</code></pre>
+
+      <section>
+        <h3>Esta é uma Section</h3>
+        <p>Sections (Seções) são excelentes para dividir uma página em múltiplas seções.</p>
+        <p>Utilize as seções para organizar o seu conteúdo em grupos temáticos lógicos. Cada seção geralmente contém o
+          seu próprio título e ajuda a estruturar páginas longas de forma mais clara e semântica, tanto para o
+          utilizador final como para os motores de busca (SEO).</p>
+      </section>
+
+      <pre><code>&lt;section&gt;
+  &lt;h3&gt;Esta é uma Section&lt;/h3&gt;
+  &lt;p&gt;Utilize as seções para organizar o seu conteúdo em grupos temáticos lógicos...&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+      <h2>Imagens e Colunas</h2>
+      <p>O framework ajusta as imagens automaticamente. Na demonstração abaixo, usámos o nosso sistema de colunas para
+        colocar 2 imagens lado a lado. Basta substituir a URL no <code>src=""</code> pelas suas próprias imagens!</p>
+
+      <div class="row">
+        <div class="column-6">
+          <figure>
+            <img src="assets/Zenite.jpg" alt="Exemplo Imagem 1">
+            <figcaption>Imagem 1 inserida na coluna esquerda</figcaption>
+          </figure>
+        </div>
+        <div class="column-6">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80"
+              alt="Exemplo Imagem 2">
+            <figcaption>Imagem 2 inserida na coluna direita</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <pre><code>&lt;div class="row"&gt;
+  &lt;div class="column-6"&gt;
+    &lt;figure&gt;
+      &lt;img src="assets/Zenite.jpg" alt="Exemplo Imagem 1"&gt;
+      &lt;figcaption&gt;Imagem 1 inserida na coluna esquerda&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+  &lt;div class="column-6"&gt;
+    &lt;figure&gt;
+      &lt;img src="imagem2.jpg" alt="Exemplo Imagem 2"&gt;
+      &lt;figcaption&gt;Imagem 2 inserida na coluna direita&lt;/figcaption&gt;
+    &lt;/figure&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+      <h2>Tabelas e Etiquetas (Badges)</h2>
+      <p>Combine as tabelas com a classe <code>.badge</code> para criar painéis de administração elegantes e fáceis de
+        ler.</p>
+
+      <div class="table-container">
+        <table class="table-striped">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>Cargo</th>
+              <th class="text-center">Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Yuri Lucas</td>
+              <td>Dev Front-end</td>
+              <td class="text-center"><span class="badge">Férias</span></td>
+            </tr>
+            <tr>
+              <td>Douglas</td>
+              <td>Gestor de TI</td>
+              <td class="text-center"><span class="badge badge-accent">Ativo</span></td>
+            </tr>
+            <tr>
+              <td>João Vitor</td>
+              <td>Dev Back-End</td>
+              <td class="text-center"><span class="badge badge-accent">Ativo</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <pre><code>&lt;table class="table-striped"&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Nome&lt;/th&gt;
+      &lt;th&gt;Cargo&lt;/th&gt;
+      &lt;th class="text-center"&gt;Status&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Yuri Lucas&lt;/td&gt;
+      &lt;td&gt;Dev Front-end&lt;/td&gt;
+      &lt;td class="text-center"&gt;&lt;span class="badge"&gt;Férias&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Douglas&lt;/td&gt;
+      &lt;td&gt;Gestor de TI&lt;/td&gt;
+      &lt;td class="text-center"&gt;&lt;span class="badge badge-accent"&gt;Ativo&lt;/span&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+      <h2>Detalhes e Sanfonas (Accordions)</h2>
+      <p>As tags <code>&lt;details&gt;</code> são excelentes para páginas de Perguntas Frequentes (FAQ). O Zênite UI
+        encarrega-se de criar caixas interativas, sem utilizar JavaScript.</p>
+
+      <details>
+        <summary>O Zênite UI foi criado para que?</summary>
+        <p>O nosso framework foi criado para utilizarmos nos nossos projetos.</p>
+      </details>
+      <details>
+        <summary>Preciso de saber JavaScript para utilizar?</summary>
+        <p>De forma alguma. Todos os componentes, incluindo esta própria sanfona, funcionam apenas com HTML5 puro e CSS
+          moderno.</p>
+      </details>
+
+      <pre><code>&lt;details&gt;
+  &lt;summary&gt;O Zênite UI foi criado para que?&lt;/summary&gt;
+  &lt;p&gt;O nosso framework foi criado para utilizarmos nos nossos projetos.&lt;/p&gt;
+&lt;/details&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+      <h2>Formulários (Forms)</h2>
+      <p>Formulários são úteis para contatos ou inscrições. Todos os inputs são coloridos com o fundo secundário da
+        Zênite e brilham a dourado quando clicados.</p>
+
+      <div class="card">
+        <form>
+          <label>Nome Completo</label>
+          <input type="text" name="nome" placeholder="Introduza o seu nome">
+
+          <label>E-mail</label>
+          <input type="email" name="email" required placeholder="email@zenite.com">
+
+          <label>Tipo de Pedido:</label>
+          <div class="radio-group">
+            <label><input type="radio" name="tipo" value="vendas" checked> Vendas</label>
+            <label><input type="radio" name="tipo" value="suporte"> Suporte</label>
+            <label><input type="radio" name="tipo" value="faturacao"> Faturação</label>
+          </div>
+
+          <label>Mensagem</label>
+          <textarea rows="4" placeholder="Como podemos ajudar?"></textarea>
+
+          <div class="checkbox-group" style="margin-top: 1rem;">
+            <input type="checkbox" id="termos">
+            <label for="termos">Concordo com os <a href="#">Termos e Condições</a></label>
+          </div>
+
+          <div class="button-group">
+            <button type="button" class="button">Enviar Mensagem</button>
+            <button type="button" class="button button-outline" disabled>Limpar Formulário</button>
+          </div>
+        </form>
+      </div>
+
+      <pre><code>&lt;div class="card"&gt;
+  &lt;form&gt;
+    &lt;label&gt;Nome Completo&lt;/label&gt;
+    &lt;input type="text" name="nome" placeholder="Introduza o seu nome"&gt;
+
+    &lt;label&gt;E-mail&lt;/label&gt;
+    &lt;input type="email" name="email" required placeholder="email@zenite.com"&gt;
+
+    &lt;label&gt;Tipo de Pedido:&lt;/label&gt;
+    &lt;div class="radio-group"&gt;
+      &lt;label&gt;&lt;input type="radio" name="tipo" value="vendas" checked&gt; Vendas&lt;/label&gt;
+      &lt;label&gt;&lt;input type="radio" name="tipo" value="suporte"&gt; Suporte&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;label&gt;Mensagem&lt;/label&gt;
+    &lt;textarea rows="4" placeholder="Como podemos ajudar?"&gt;&lt;/textarea&gt;
+
+    &lt;div class="checkbox-group" style="margin-top: 1rem;"&gt;
+      &lt;input type="checkbox" id="termos"&gt;
+      &lt;label for="termos"&gt;Concordo com os &lt;a href="#"&gt;Termos e Condições&lt;/a&gt;&lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div class="button-group"&gt;
+      &lt;button type="button" class="button"&gt;Enviar Mensagem&lt;/button&gt;
+      &lt;button type="button" class="button button-outline" disabled&gt;Limpar Formulário&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+      <h3>Combobox(JS)</h3>
+      <p>Uma caixa de pesquisa avançada com total controle visual, usando JavaScript nativo do nosso framework.</p>
+
+      <div class="card">
+        <label>Pesquisar Utilizador (Nome ou CPF):</label>
+
+        <div class="zf-combobox">
+          <input type="text" class="zf-combobox-input" placeholder="Escreva para pesquisar...">
+          <span class="zf-combobox-clear" title="Limpar">&times;</span>
+          <ul class="zf-combobox-list">
+
+            <li class="zf-combobox-item" data-id="1">
+              <div class="zf-cb-left">
+                <span class="zf-cb-name">Yuri Lucas</span>
+                <span class="zf-cb-cpf">CPF: 617.051.900-22</span>
+              </div>
+              <span class="zf-cb-info">Gestor de TI</span>
+            </li>
+
+            <li class="zf-combobox-item" data-id="2">
+              <div class="zf-cb-left">
+                <span class="zf-cb-name">Yuri Lucas</span>
+                <span class="zf-cb-cpf">CPF: 239.480.070-47</span>
+              </div>
+              <span class="zf-cb-info">Dev Front-End</span>
+            </li>
+
+            <li class="zf-combobox-item" data-id="3">
+              <div class="zf-cb-left">
+                <span class="zf-cb-name">Yuri Lucas</span>
+                <span class="zf-cb-cpf">CPF: 104.567.336-63</span>
+              </div>
+              <span class="zf-cb-info">Analista de suporte</span>
+            </li>
+
+            <li class="zf-combobox-item" data-id="4">
+              <div class="zf-cb-left">
+                <span class="zf-cb-name">Yuri Lucas</span>
+                <span class="zf-cb-cpf">CPF: 688.449.110-86</span>
+              </div>
+              <span class="zf-cb-info">Dev Back-End</span>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+      <pre><code>&lt;label&gt;Pesquisar Utilizador (Nome ou CPF):&lt;/label&gt;
+
+&lt;div class="zf-combobox"&gt;
+  &lt;input type="text" class="zf-combobox-input" placeholder="Escreva para pesquisar..."&gt;
+  &lt;ul class="zf-combobox-list"&gt;
+
+    &lt;!-- Item do Combobox (com ID para JS) --&gt;
+    &lt;li class="zf-combobox-item" data-id="1"&gt;
+      &lt;div class="zf-cb-left"&gt;
+        &lt;span class="zf-cb-name"&gt;Nome do Utilizador&lt;/span&gt;
+        &lt;span class="zf-cb-cpf"&gt;CPF: 000.000.000-00&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;span class="zf-cb-info"&gt;Cargo / Info&lt;/span&gt;
+    &lt;/li&gt;
+
+    &lt;!-- Adicione mais &lt;li&gt; aqui... --&gt;
+
+  &lt;/ul&gt;
+&lt;/div&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+      <h3>Calendário (Date Widget)</h3>
+      <p>Um calendário incrivelmente responsivo construído com <code>CSS Grid</code>. Perfeito para usar como um painel
+        lateral em *dashboards* ou como base para um *Date Picker*.</p>
+
+      <div class="calendar">
+        <div class="calendar-header">
+          <button class="calendar-btn">&lt;</button>
+          <h3>Fevereiro 2026</h3>
+          <button class="calendar-btn">&gt;</button>
+        </div>
+
+        <div class="calendar-grid">
+          <div class="calendar-day-name">Dom</div>
+          <div class="calendar-day-name">Seg</div>
+          <div class="calendar-day-name">Ter</div>
+          <div class="calendar-day-name">Qua</div>
+          <div class="calendar-day-name">Qui</div>
+          <div class="calendar-day-name">Sex</div>
+          <div class="calendar-day-name">Sáb</div>
+
+          <div class="calendar-day empty">27</div>
+          <div class="calendar-day empty">28</div>
+          <div class="calendar-day empty">29</div>
+          <div class="calendar-day empty">30</div>
+
+          <div class="calendar-day">1</div>
+          <div class="calendar-day">2</div>
+          <div class="calendar-day">3</div>
+          <div class="calendar-day">4</div>
+          <div class="calendar-day">5</div>
+          <div class="calendar-day">6</div>
+          <div class="calendar-day">7</div>
+          <div class="calendar-day">8</div>
+          <div class="calendar-day">9</div>
+          <div class="calendar-day">10</div>
+          <div class="calendar-day">11</div>
+          <div class="calendar-day">12</div>
+          <div class="calendar-day">13</div>
+          <div class="calendar-day">14</div>
+          <div class="calendar-day active">15</div>
+          <div class="calendar-day">16</div>
+          <div class="calendar-day">17</div>
+          <div class="calendar-day">18</div>
+          <div class="calendar-day">19</div>
+          <div class="calendar-day">20</div>
+          <div class="calendar-day">21</div>
+          <div class="calendar-day">22</div>
+          <div class="calendar-day">23</div>
+          <div class="calendar-day">24</div>
+          <div class="calendar-day">25</div>
+          <div class="calendar-day">26</div>
+          <div class="calendar-day">27</div>
+          <div class="calendar-day">28</div>
+          <div class="calendar-day">29</div>
+          <div class="calendar-day">30</div>
+          <div class="calendar-day">31</div>
+
+          <div class="calendar-day empty">1</div>
+        </div>
+      </div>
+
+      <pre><code>&lt;div class="calendar"&gt;
+  &lt;div class="calendar-header"&gt;
+    &lt;button class="calendar-btn"&gt;&amp;lt;&lt;/button&gt;
+    &lt;h3&gt;Outubro 2026&lt;/h3&gt;
+    &lt;button class="calendar-btn"&gt;&amp;gt;&lt;/button&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="calendar-grid"&gt;
+    &lt;div class="calendar-day-name"&gt;Dom&lt;/div&gt;
+    &lt;!-- ... outros dias da semana --&gt;
+    
+    &lt;div class="calendar-day empty"&gt;30&lt;/div&gt;
+    &lt;div class="calendar-day"&gt;1&lt;/div&gt;
+    &lt;div class="calendar-day active"&gt;15&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+
+      <h2>Menu Lateral (Sidebar)</h2>
+      <p>Uma barra lateral (off-canvas) usando o Checkbox.</p>
+
+      <input type="checkbox" id="menu-toggle" class="sidebar-checkbox">
+      <label for="menu-toggle" class="sidebar-toggle-btn">☰ Abrir Sidebar</label>
+
+      <div class="sidebar-overlay">
+        <label for="menu-toggle" style="display:block; width:100%; height:100%; cursor:pointer;"></label>
+      </div>
+
+      <aside class="sidebar">
+        <h3 style="color: var(--zf-accent); margin-top: 0;">Zênite Painel</h3>
+        <p>Menu de navegação</p>
+        <div class="sidebar-nav">
+          <a href="#" class="active">Visão Geral</a>
+          <a href="#">Utilizadores</a>
+          <a href="#">Configurações</a>
+        </div>
+        <label for="menu-toggle" class="button button-outline"
+          style="margin-top: 2rem; width: 100%; text-align: center;">Fechar Menu</label>
+      </aside>
+
+      <pre><code>&lt;input type="checkbox" id="menu-toggle" class="sidebar-checkbox"&gt;
+&lt;label for="menu-toggle" class="sidebar-toggle-btn"&gt;☰ Abrir Sidebar&lt;/label&gt;
+
+&lt;div class="sidebar-overlay"&gt;
+  &lt;label for="menu-toggle" style="display:block; width:100%; height:100%; cursor:pointer;"&gt;&lt;/label&gt;
+&lt;/div&gt;
+
+&lt;aside class="sidebar"&gt;
+  &lt;h3 style="color: var(--zf-accent); margin-top: 0;"&gt;Zênite Painel&lt;/h3&gt;
+  &lt;p&gt;Menu de navegação&lt;/p&gt;
+  &lt;div class="sidebar-nav"&gt;
+    &lt;a href="#" class="active"&gt;Visão Geral&lt;/a&gt;
+    &lt;a href="#"&gt;Utilizadores&lt;/a&gt;
+    &lt;a href="#"&gt;Configurações&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;label for="menu-toggle" class="button button-outline" style="margin-top: 2rem; width: 100%; text-align: center;"&gt;Fechar Menu&lt;/label&gt;
+&lt;/aside&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+      <h2>Janelas Modais (Dialog)</h2>
+      <p>Utilizamos a tag nativa do HTML5 <code>&lt;dialog&gt;</code> para criar pop-ups com um belo desfoque de fundo
+        (backdrop filter).</p>
+
+      <div class="button-group">
+        <button class="button" onclick="document.getElementById('meu-modal').showModal()">Abrir Modal</button>
+      </div>
+
+      <dialog id="meu-modal">
+        <div class="modal-header">
+          <h3>Confirmar Ação</h3>
+          <button class="close-modal" onclick="document.getElementById('meu-modal').close()">&times;</button>
+        </div>
+        <p>Tem a certeza de que deseja apagar este registo? Esta ação não pode ser desfeita e os dados serão
+          permanentemente perdidos do servidor.</p>
+        <div class="button-group" style="margin-top: 1.5rem; margin-bottom: 0;">
+          <button class="button" onclick="document.getElementById('meu-modal').close()">Sim, Apagar</button>
+          <button class="button button-outline" onclick="document.getElementById('meu-modal').close()">Cancelar</button>
+        </div>
+      </dialog>
+
+      <pre><code>&lt;button class="button" onclick="document.getElementById('meu-modal').showModal()"&gt;Abrir Modal&lt;/button&gt;
+
+&lt;dialog id="meu-modal"&gt;
+  &lt;div class="modal-header"&gt;
+    &lt;h3&gt;Confirmar Ação&lt;/h3&gt;
+    &lt;button class="close-modal" onclick="document.getElementById('meu-modal').close()"&gt;&amp;times;&lt;/button&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Tem a certeza de que deseja apagar este registo? Esta ação não pode ser desfeita e os dados serão permanentemente perdidos do servidor.&lt;/p&gt;
+  &lt;div class="button-group" style="margin-top: 1.5rem; margin-bottom: 0;"&gt;
+    &lt;button class="button" onclick="document.getElementById('meu-modal').close()"&gt;Sim, Apagar&lt;/button&gt;
+    &lt;button class="button button-outline" onclick="document.getElementById('meu-modal').close()"&gt;Cancelar&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/dialog&gt;</code></pre>
+
+    </main>
+
+    <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+    <h2>Componentes Avançados</h2>
+    <h3>1. Interruptores (Switches)</h3>
+    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;">
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider"></span>
+      </label>
+      <span id="theme-label">Modo Escuro Ativado</span>
+    </div>
+
+    <pre><code>&lt;label class="switch"&gt;
+  &lt;input type="checkbox" checked&gt;
+  &lt;span class="slider"&gt;&lt;/span&gt;
+&lt;/label&gt;</code></pre>
+
+    <p>Alerta de sistema com diferentes tipos de mensagens.</p>
+
+    <h3>2. Alertas de Sistema</h3>
+    <div class="alert alert-success">Operação concluída com sucesso!</div>
+    <div class="alert alert-warning">Atenção: A sua assinatura expira em 3 dias.</div>
+    <div class="alert alert-error">Erro ao conectar à base de dados.</div>
+
+    <pre><code>&lt;div class="alert alert-success"&gt;Operação concluída com sucesso!&lt;/div&gt;
+&lt;div class="alert alert-warning"&gt;Atenção: A sua subscrição expira em 3 dias.&lt;/div&gt;
+&lt;div class="alert alert-error"&gt;Erro ao conectar à base de dados.&lt;/div&gt;</code></pre>
+
+    <h3>3. Avatares</h3>
+    <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 2rem;">
+      <img src="assets/Zenite.jpg" alt="Avatar" class="avatar avatar-lg">
+      <img src="assets/logobranca.jpeg" alt="Avatar" class="avatar">
+      <div class="avatar avatar-sm">ZT</div>
+    </div>
+    <pre><code>&lt;img src="imagem.jpg" alt="Avatar" class="avatar avatar-lg"&gt;
+&lt;img src="imagem.jpg" alt="Avatar" class="avatar"&gt;
+&lt;div class="avatar avatar-sm"&gt;YL&lt;/div&gt;</code></pre>
+
+    <h3>4. Tooltips (Dicas)</h3>
+    <p>Passe o mouse por cima desta <span data-tooltip="Mensagem Teste!" style="color: var(--zf-accent);">palavra
+        sublinhada</span> para ver o Tooltip a funcionar através de CSS puro.</p>
+    <pre><code>&lt;span data-tooltip="Mensagem Teste!" style="color: var(--zf-accent);"&gt;palavra sublinhada&lt;/span&gt;</code></pre>
+
+    <h3>5. Progresso e Carregamento</h3>
+    <label>A carregar ficheiros (70%)</label>
+    <progress value="70" max="100">70%</progress>
+
+    <div style="display: flex; align-items: center; gap: 1rem;">
+      <div class="spinner"></div>
+      <span>Sincronizando dados...</span>
+    </div>
+
+    <pre><code>&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;
+
+&lt;div class="spinner"&gt;&lt;/div&gt;</code></pre>
+    <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+    <h3>6. Abas Interativas (Tabs)</h3>
+    <p>Navegação por abas com o <i>Radio Buttons</i> do HTML/CSS.</p>
+    <div class="tabs">
+      <input type="radio" id="tab1" name="mytabs" checked>
+      <label for="tab1">Perfil</label>
+      <div class="tab-content">
+        <h4>Configurações de Perfil</h4>
+        <p>Aqui você pode alterar a sua fotografia (Avatar) e o seu nome de utilizador.</p>
+      </div>
+
+      <input type="radio" id="tab2" name="mytabs">
+      <label for="tab2">Segurança</label>
+      <div class="tab-content">
+        <h4>Privacidade e Segurança</h4>
+        <p>Altere a sua palavra-passe ou ative a autenticação de dois fatores.</p>
+      </div>
+
+      <input type="radio" id="tab3" name="mytabs">
+      <label for="tab3">Faturação</label>
+      <div class="tab-content">
+        <h4>Dados de Faturação</h4>
+        <div class="alert alert-warning">A sua morada de faturação está incompleta.</div>
+      </div>
+    </div>
+
+    <pre><code>&lt;div class="tabs"&gt;
+  &lt;input type="radio" id="tab1" name="mytabs" checked&gt;
+  &lt;label for="tab1"&gt;Perfil&lt;/label&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;h4&gt;Configurações de Perfil&lt;/h4&gt;
+    &lt;p&gt;Conteúdo da aba...&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;input type="radio" id="tab2" name="mytabs"&gt;
+  &lt;label for="tab2"&gt;Segurança&lt;/label&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;h4&gt;Privacidade e Segurança&lt;/h4&gt;
+    &lt;p&gt;Conteúdo da aba...&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+    <h3>7. Paginação (Pagination)</h3>
+    <p>Navegação para dividir conteúdos longos ou tabelas de dados. Inclui estados interativos para a página atual
+      (<code>.active</code>) e para botões inativos (<code>.disabled</code>).</p>
+
+    <ul class="pagination">
+      <li class="disabled"><span>Anterior</span></li>
+
+      <li class="active"><span>1</span></li>
+
+      <li><a>2</a></li>
+      <li><a>3</a></li>
+      <li><a>4</a></li>
+
+      <li><a>Seguinte</a></li>
+    </ul>
+
+    <pre><code>&lt;ul class="pagination"&gt;
+  &lt;li class="disabled"&gt;&lt;span&gt;Anterior&lt;/span&gt;&lt;/li&gt;
+  &lt;li class="active"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;Seguinte&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+    <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+    <h3>8. Inputs Especiais (File & Range)</h3>
+    <p>Inputs nativos.</p>
+
+    <div class="card">
+      <label>Upload de Documentos (PDF, JPG)</label>
+      <input type="file" accept="image/*,.pdf">
+
+      <label style="margin-top: 1rem;">Ajuste de Opacidade (Range)</label>
+      <input type="range" min="0" max="100" value="75">
+    </div>
+
+    <pre><code>&lt;label&gt;Upload de Documentos (PDF, JPG)&lt;/label&gt;
+&lt;input type="file" accept="image/*,.pdf"&gt;
+
+&lt;label&gt;Ajuste de Opacidade (Range)&lt;/label&gt;
+&lt;input type="range" min="0" max="100" value="75"&gt;</code></pre>
+
+    <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+    <h3>9. Carrossel (CSS Scroll Snap)</h3>
+    <p>Um carrossel moderno e responsivo com CSS nativo. Suporta navegação por toque (swipe) em dispositivos móveis e
+      arrasto na barra de rolagem em desktops.</p>
+
+    <h4>Galeria de Imagens</h4>
+    <div class="carousel">
+      <div class="carousel-item">
+        <img src="assets/Zenite.jpg" alt="Slide 1" style="height: 400px;">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/montanha-dourada.png" alt="Slide 2" style="height: 400px;">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/logobranca.jpeg" alt="Slide 3" style="height: 400px;">
+      </div>
+    </div>
+
+    <h4 style="margin-top: 2rem;">Carrossel de Cartões (Cards)</h4>
+    <div class="carousel carousel-cards">
+      <div class="carousel-item">
+        <div class="card" style="margin-bottom: 0;">
+          <h3>Design UI/UX</h3>
+          <p>Criamos interfaces intuitivas e esteticamente agradáveis para os seus utilizadores.</p>
+          <a href="#" class="button button-outline mt-1">Saber mais</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card" style="margin-bottom: 0;">
+          <h3>Desenvolvimento Web</h3>
+          <p>Aplicações robustas, rápidas e construídas com as tecnologias mais recentes do mercado.</p>
+          <a href="#" class="button button-outline mt-1">Saber mais</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card" style="margin-bottom: 0;">
+          <h3>Consultoria de TI</h3>
+          <p>Analisamos a sua infraestrutura e propomos soluções de otimização e segurança.</p>
+          <a href="#" class="button button-outline mt-1">Saber mais</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <div class="card" style="margin-bottom: 0;">
+          <h3>Marketing Digital</h3>
+          <p>Estratégias orientadas a dados para escalar o alcance da sua marca na internet.</p>
+          <a href="#" class="button button-outline mt-1">Saber mais</a>
+        </div>
+      </div>
+    </div>
+
+    <pre><code>&lt;!-- Carrossel de Imagens Padrão --&gt;
+&lt;div class="carousel"&gt;
+  &lt;div class="carousel-item"&gt;
+    &lt;img src="imagem1.jpg" alt="Slide 1"&gt;
+  &lt;/div&gt;
+  &lt;div class="carousel-item"&gt;
+    &lt;img src="imagem2.jpg" alt="Slide 2"&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Carrossel de Cartões (Múltiplos itens) --&gt;
+&lt;div class="carousel carousel-cards"&gt;
+  &lt;div class="carousel-item"&gt;
+    &lt;div class="card"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="carousel-item"&gt;
+    &lt;div class="card"&gt;...&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+    <h3>10. Skeleton Loaders (Carregamento Fantasma)</h3>
+    <p>Um efeito de "onda" (wave) em CSS puro para indicar o carregamento de dados.</p>
+
+    <div class="row">
+      <div class="column-6">
+        <div class="card" style="margin-bottom: 0;">
+          <div style="display: flex; gap: 1rem; align-items: center; margin-bottom: 1.5rem;">
+            <div class="skeleton skeleton-avatar"></div>
+            <div style="flex: 1;">
+              <div class="skeleton skeleton-title" style="margin-bottom: 0.5rem; width: 50%;"></div>
+              <div class="skeleton skeleton-text" style="margin-bottom: 0; width: 30%;"></div>
+            </div>
+          </div>
+
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text short"></div>
+
+          <div class="skeleton skeleton-button"></div>
+        </div>
+      </div>
+
+      <div class="column-6">
+        <div class="card" style="margin-bottom: 0;">
+          <div class="skeleton skeleton-image"></div>
+          <div class="skeleton skeleton-title" style="width: 80%;"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text short"></div>
+        </div>
+      </div>
+    </div>
+
+    <pre><code>&lt;!-- Estrutura de um Cartão Skeleton --&gt;
+&lt;div class="card"&gt;
+  &lt;!-- Imagem fantasma --&gt;
+  &lt;div class="skeleton skeleton-image"&gt;&lt;/div&gt;
+
+  &lt;!-- Título fantasma --&gt;
+  &lt;div class="skeleton skeleton-title"&gt;&lt;/div&gt;
+
+  &lt;!-- Linhas de texto fantasmas --&gt;
+  &lt;div class="skeleton skeleton-text"&gt;&lt;/div&gt;
+  &lt;div class="skeleton skeleton-text short"&gt;&lt;/div&gt;
+
+  &lt;!-- Botão fantasma --&gt;
+  &lt;div class="skeleton skeleton-button"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+    <footer
+      style="margin-top: 4rem; text-align: center; border-top: 1px solid rgba(212, 175, 55, 0.2); padding-top: 2rem;">
+      <p>2026 Zênite Tecnologia. Todos os direitos reservados.</p>
+    </footer>
+
+  </div>
+  <script src="../js/zenite.js"></script>
+</body>
+
+</html>
