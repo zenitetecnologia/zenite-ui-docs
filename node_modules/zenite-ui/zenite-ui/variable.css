@@ -1,0 +1,124 @@
+:root {
+  /*cores da logo*/
+  --zf-background-primary: #020D2A;
+  --zf-background-secondary: #0A1F44;
+  --zf-accent: #D4AF37;
+  --zf-text-main: #A0AEC0;
+  --zf-text-light: #FFFFFF;
+
+  /*fonte*/
+  --zf-font-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /*layout*/
+  --zf-container-width: 1200px;
+  --zf-column-gap: 1.5rem;
+}
+
+/*reset*/
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--zf-background-primary);
+  color: var(--zf-text-main);
+  font-family: var(--zf-font-base);
+  line-height: 1.6;
+  font-size: 1.15rem;
+}
+
+/*tema claro*/
+[data-theme="light"] {
+  --zf-background-primary: #97919183; 
+  --zf-background-secondary: #e3e3e383; 
+
+  --zf-accent: #0A1F44; 
+
+  --zf-text-main: #52525B;
+  --zf-text-light: #18181B; 
+}
+
+[data-theme="light"] .button:not(.button-outline),
+[data-theme="light"] .button.button-outline:hover,
+[data-theme="light"] .pagination li.active span,
+[data-theme="light"] mark,
+[data-theme="light"] input[type="file"]::file-selector-button {
+  color: #FFFFFF !important; 
+}
+
+[data-theme="light"] .switch input:checked + .slider:before {
+  background-color: #FAFAFA !important;
+}
+
+[data-theme="light"] .card,
+[data-theme="light"] pre,
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select,
+[data-theme="light"] details,
+[data-theme="light"] .table-container,
+[data-theme="light"] .sidebar,
+[data-theme="light"] .zf-combobox-list {
+  border-color: #0A1F44 !important;
+}
+
+[data-theme="light"] hr,
+[data-theme="light"] .modal-header,
+[data-theme="light"] nav,
+[data-theme="light"] .tabs,
+[data-theme="light"] th,
+[data-theme="light"] td,
+[data-theme="light"] .sidebar-nav a,
+[data-theme="light"] details[open] summary {
+  border-color: rgba(10, 31, 68, 0.3) !important; 
+}
+
+/*skeleton*/
+[data-theme="light"] .skeleton {
+
+  background-color: rgba(10, 31, 68, 0.05) !important; 
+
+  background-image: linear-gradient(
+    90deg,
+    rgba(10, 31, 68, 0) 0%,
+    rgba(10, 31, 68, 0.15) 50%,
+    rgba(10, 31, 68, 0) 100%
+  ) !important;
+}
+
+[data-theme="light"] .card:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+  border-color: var(--zf-accent) !important;
+}
+
+[data-theme="light"] .zf-combobox-list {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08) !important;
+}
+
+[data-theme="light"] dialog {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1) !important;
+}
+
+[data-theme="light"] dialog::backdrop,
+[data-theme="light"] .sidebar-overlay {
+  background-color: rgba(24, 24, 27, 0.5) !important; 
+}
+
+/*componentes flutuantes ficarem solidos*/
+[data-theme="light"] .zf-combobox-list,
+[data-theme="light"] dialog,
+[data-theme="light"] .sidebar {
+  background-color: #e3e3e383 !important;
+  backdrop-filter: blur(12px) !important; 
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1px solid rgba(10, 31, 68, 0.1) !important;
+  box-shadow: 0 12px 35px rgba(10, 31, 68, 0.15) !important; 
+}
+
+[data-theme="light"] dialog::backdrop,
+[data-theme="light"] .sidebar-overlay {
+  background-color: rgba(10, 31, 68, 0.5) !important; 
+  backdrop-filter: blur(3px) !important; 
+}

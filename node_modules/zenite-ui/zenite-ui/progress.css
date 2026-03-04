@@ -1,0 +1,24 @@
+progress {
+  appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+progress::-webkit-progress-bar { background-color: var(--zf-background-secondary); }
+progress::-webkit-progress-value { background-color: var(--zf-accent); }
+progress::-moz-progress-bar { background-color: var(--zf-accent); }
+
+/*spinner(carregando)*/
+.spinner {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 3px solid rgba(212, 175, 55, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--zf-accent);
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

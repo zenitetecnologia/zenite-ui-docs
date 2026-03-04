@@ -1,0 +1,13 @@
+.alert {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  background-color: var(--zf-background-secondary);
+  color: var(--zf-text-light);
+  border-left: 4px solid var(--zf-text-main);
+  display: flex;
+  align-items: center;
+}
+.alert-success { border-left-color: #28a745; background-color: rgba(40, 167, 69, 0.1); }
+.alert-error { border-left-color: #dc3545; background-color: rgba(220, 53, 69, 0.1); }
+.alert-warning { border-left-color: #ffc107; background-color: rgba(255, 193, 7, 0.1); }
