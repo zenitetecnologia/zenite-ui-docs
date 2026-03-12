@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "zenite-framework": "^1.0.1"
+    "zenite-ui": "^1.0.3"
   }
 }
