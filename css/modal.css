@@ -1,0 +1,80 @@
+dialog {
+  background-color: var(--zf-background-secondary);
+  color: var(--zf-text-light);
+  border: 1px solid var(--zf-accent);
+  border-radius: 8px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  margin: auto; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+dialog::backdrop {
+  background-color: rgba(2, 13, 42, 0.85); 
+  backdrop-filter: blur(4px);
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  padding-bottom: 1rem;
+}
+
+.modal-header h2, .modal-header h3 {
+  margin: 0;
+}
+
+/*fechar modal*/
+.close-modal {
+  background: transparent;
+  border: none;
+  color: var(--zf-text-main);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.close-modal:hover {
+  color: var(--zf-accent);
+}
+
+/*animacao modal*/
+dialog[open] {
+  animation: abrirModal 0.5s ease-in-out forwards;
+}
+
+@keyframes abrirModal {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(-30px); 
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0); 
+  }
+}
+
+dialog[open]::backdrop {
+  animation: aparecerFundo 0.5s ease-in-out forwards;
+}
+
+@keyframes aparecerFundo {
+  0% {
+    opacity: 0;
+    backdrop-filter: blur(0px);
+  }
+  100% {
+    opacity: 1;
+    background-color: rgba(2, 13, 42, 0.85);
+    backdrop-filter: blur(4px);
+  }
+}

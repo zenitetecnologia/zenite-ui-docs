@@ -1,0 +1,33 @@
+.card {
+  background-color: var(--zf-background-secondary);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.0rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  position: relative; 
+  z-index: 1; 
+}
+
+/*efeito de elevaçao interativa*/
+.card:hover,
+.card:focus-within {
+  transform: translateY(-4px);
+  border-color: var(--zf-accent);
+  box-shadow: 0 8px 24px rgba(2, 13, 42, 0.8);
+  z-index: 50; 
+}
+
+/*ajustes de tipografia dentro do card para nao ter margens excessivas*/
+.card > h1:first-child,
+.card > h2:first-child,
+.card > h3:first-child {
+  margin-top: 0;
+}
+
+.card > *:last-child {
+  margin-bottom: 0;
+}
