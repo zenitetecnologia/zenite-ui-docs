@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zênite UI | FrameWork</title>
-<link href="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.2/css/zenite.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.2/css/zenite.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -47,13 +47,114 @@
 
     <div style="margin-top: 2rem; margin-bottom: 3rem;">
       <h1>Demonstração do Zênite UI</h1>
-      <p>Uma mostra da formatação do nosso framework em ação, inspirada na simplicidade e elegância das melhores documentações da web.</p>
+      <p>Uma mostra da formatação do nosso framework em ação, inspirada na simplicidade e elegância das melhores
+        documentações da web.</p>
 
     </div>
 
     <div class="container" style="max-width: 850px; padding-top: 1rem; padding-bottom: 3rem;"></div>
 
     <main>
+
+      <h2>Layout e Sistema de Grid</h2>
+      <p>O Zênite UI utiliza um sistema de grid responsivo de 12 colunas incrivelmente leve. Ele é construído para ser
+        intuitivo e ajusta-se automaticamente a diferentes tamanhos de ecrã, garantindo que o seu conteúdo se empilhe
+        perfeitamente em dispositivos móveis.</p>
+
+      <h3>Como funciona</h3>
+      <p>Utilize a classe <code>.row</code> para criar uma linha, e as classes <code>.column-*</code> (de 1 a 12) para
+        definir a largura de cada coluna. Por padrão, em ecrãs pequenos (smartphones), todas as colunas passam a ocupar
+        100% da largura para facilitar a leitura.</p>
+
+      <div style="text-align: center; color: var(--zf-accent, #D4AF37); margin-top: 2rem; margin-bottom: 2rem;">
+
+        <div class="row" style="margin-bottom: 1rem;">
+          <div class="column-12">
+            <div
+              style="background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--zf-accent); padding: 1rem; border-radius: 4px;">
+              .column-12 (100%)</div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 1rem;">
+          <div class="column-6">
+            <div
+              style="background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--zf-accent); padding: 1rem; border-radius: 4px;">
+              .column-6 (50%)</div>
+          </div>
+          <div class="column-6">
+            <div
+              style="background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--zf-accent); padding: 1rem; border-radius: 4px;">
+              .column-6 (50%)</div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 1rem;">
+          <div class="column-4">
+            <div
+              style="background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--zf-accent); padding: 1rem; border-radius: 4px;">
+              .column-4 (33.3%)</div>
+          </div>
+          <div class="column-4">
+            <div
+              style="background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--zf-accent); padding: 1rem; border-radius: 4px;">
+              .column-4 (33.3%)</div>
+          </div>
+          <div class="column-4">
+            <div
+              style="background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--zf-accent); padding: 1rem; border-radius: 4px;">
+              .column-4 (33.3%)</div>
+          </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 1rem;">
+          <div class="column-3">
+            <div
+              style="background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--zf-accent); padding: 1rem; border-radius: 4px;">
+              .column-3 (25%)</div>
+          </div>
+          <div class="column-3">
+            <div
+              style="background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--zf-accent); padding: 1rem; border-radius: 4px;">
+              .column-3 (25%)</div>
+          </div>
+          <div class="column-3">
+            <div
+              style="background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--zf-accent); padding: 1rem; border-radius: 4px;">
+              .column-3 (25%)</div>
+          </div>
+          <div class="column-3">
+            <div
+              style="background: rgba(212, 175, 55, 0.1); border: 1px dashed var(--zf-accent); padding: 1rem; border-radius: 4px;">
+              .column-3 (25%)</div>
+          </div>
+        </div>
+
+      </div>
+
+      <pre><code>&lt;div class="row"&gt;
+  &lt;div class="column-12"&gt;Largura total (100%)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="column-6"&gt;Metade da tela (50%)&lt;/div&gt;
+  &lt;div class="column-6"&gt;Metade da tela (50%)&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="column-4"&gt;Um terço (33.3%)&lt;/div&gt;
+  &lt;div class="column-4"&gt;Um terço (33.3%)&lt;/div&gt;
+  &lt;div class="column-4"&gt;Um terço (33.3%)&lt;/div&gt;
+
+&lt;div class="row"&gt;
+  &lt;div class="column-3"&gt;Um quarto (25%)&lt;/div&gt;
+  &lt;div class="column-3"&gt;Um quarto (25%)&lt;/div&gt;
+  &lt;div class="column-3"&gt;Um quarto (25%)&lt;/div&gt;
+  &lt;div class="column-3"&gt;Um quarto (25%)&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
       <h2>Basic Typography</h2>
       <p>Toda a tipografia utiliza a mesma hierarquia visual. A fonte base foi aumentada para facilitar a leitura em
         todos os dispositivos.</p>
@@ -856,7 +957,7 @@
     </footer>
 
   </div>
-<script src="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.2/js/zenite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.2/js/zenite.min.js"></script>
 </body>
 
 </html>
