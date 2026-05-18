@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zênite UI | FrameWork</title>
-  <link href="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.4/css/zenite.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.6/css/zenite.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -290,6 +290,73 @@
 
       <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
 
+      <h2>Utilitários de Exibição (Display e Visibilidade)</h2>
+      <p>Controle de forma rápida a exibição e a visibilidade de componentes com as classes utilitárias.</p>
+
+      <h3>Ocultar e Mostrar Elementos (Display)</h3>
+      <p>Utilize a classe <code>.d-none</code> para ocultar completamente um elemento (ele é removido do fluxo da
+        página) e <code>.d-block</code> ou <code>.d-inline</code> para torná-lo visível.</p>
+
+      <div
+        style="background: rgba(255, 255, 255, 0.02); padding: 1.5rem; border-radius: 8px 8px 0 0; border: 1px solid rgba(212, 175, 55, 0.2); border-bottom: none;">
+        <div class="d-inline"
+          style="background-color: var(--zf-accent); color: var(--zf-background-primary); padding: 0.5rem; font-weight: 600;">
+          d-inline</div>
+        <div class="d-inline" style="padding: 0.5rem;">d-inline</div>
+      </div>
+      <pre style="margin-top: 0; margin-bottom: 2rem; border-radius: 0 0 8px 8px;"><code>&lt;div class="d-inline" style="background-color: var(--zf-accent); color: var(--zf-background-primary); padding: 0.5rem;"&gt;d-inline&lt;/div&gt;
+&lt;div class="d-inline" style="padding: 0.5rem;"&gt;d-inline&lt;/div&gt;</code></pre>
+
+      <div
+        style="background: rgba(255, 255, 255, 0.02); padding: 1.5rem; border-radius: 8px 8px 0 0; border: 1px solid rgba(212, 175, 55, 0.2); border-bottom: none;">
+        <span class="d-block"
+          style="background-color: var(--zf-accent); color: var(--zf-background-primary); padding: 0.5rem; font-weight: 600;">d-block</span>
+        <span class="d-block" style="padding: 0.5rem;">d-block</span>
+      </div>
+      <pre style="margin-top: 0; margin-bottom: 2rem; border-radius: 0 0 8px 8px;"><code>&lt;span class="d-block" style="background-color: var(--zf-accent); color: var(--zf-background-primary); padding: 0.5rem;"&gt;d-block&lt;/span&gt;
+&lt;span class="d-block" style="padding: 0.5rem;"&gt;d-block&lt;/span&gt;</code></pre>
+
+      <pre><code>&lt;div class="d-inline"&gt;.d-inline&lt;/div&gt;
+&lt;div class="d-inline"&gt;.d-inline&lt;/div&gt;
+&lt;div class="d-block"&gt;.d-block&lt;/div&gt;
+&lt;div class="d-none"&gt;.d-none (Oculto, não ocupa espaço)&lt;/div&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
+      <h3>Visibilidade (Visibility)</h3>
+      <p>Diferente do <code>d-none</code>, as classes de visibilidade mantêm o espaço físico do elemento na tela, apenas
+        o tornam invisível. Use <code>.v-hidden</code> para esconder e <code>.v-visible</code> para mostrar.</p>
+
+      <div class="row" style="text-align: center; margin-bottom: 2rem;">
+        <div class="column-4">
+          <div style="padding: 1rem; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--zf-accent);">
+            .v-visible</div>
+        </div>
+        <div class="column-4">
+          <div class="v-hidden"
+            style="padding: 1rem; background: rgba(212, 175, 55, 0.2); border: 1px dashed var(--zf-accent); visibility: hidden;">
+            .v-hidden (Oculto)</div>
+        </div>
+        <div class="column-4">
+          <div style="padding: 1rem; background: rgba(212, 175, 55, 0.2); border: 1px solid var(--zf-accent);">
+            .v-visible</div>
+        </div>
+      </div>
+
+      <pre><code>&lt;div class="row"&gt;
+  &lt;div class="column-4"&gt;
+    &lt;div class="v-visible"&gt;Visível&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="column-4"&gt;
+    &lt;div class="v-hidden"&gt;Invisível (Ocupa espaço)&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="column-4"&gt;
+    &lt;div class="v-visible"&gt;Visível&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
+
       <h2>Imagens e Colunas</h2>
       <p>O framework ajusta as imagens automaticamente. Na demonstração abaixo, usámos o nosso sistema de colunas para
         colocar 2 imagens lado a lado. Basta substituir a URL no <code>src=""</code> pelas suas próprias imagens!</p>
@@ -313,13 +380,13 @@
       <pre><code>&lt;div class="row"&gt;
   &lt;div class="column-6"&gt;
     &lt;figure&gt;
-      &lt;img src="assets/Zenite.jpg" alt="Exemplo Imagem 1"&gt;
+      &lt;img src="assets/imgs/logo-primary.png" alt="Exemplo Imagem 1"&gt;
       &lt;figcaption&gt;Imagem 1 inserida na coluna esquerda&lt;/figcaption&gt;
     &lt;/figure&gt;
   &lt;/div&gt;
   &lt;div class="column-6"&gt;
     &lt;figure&gt;
-      &lt;img src="imagem2.jpg" alt="Exemplo Imagem 2"&gt;
+      &lt;img src="assets/imgs/hero-background.png" alt="Exemplo Imagem 2"&gt;
       &lt;figcaption&gt;Imagem 2 inserida na coluna direita&lt;/figcaption&gt;
     &lt;/figure&gt;
   &lt;/div&gt;
@@ -736,8 +803,8 @@
       <img src="assets/imgs/logo-white.png" alt="Avatar" class="avatar">
       <div class="avatar avatar-sm">ZT</div>
     </div>
-    <pre><code>&lt;img src="imagem.jpg" alt="Avatar" class="avatar avatar-lg"&gt;
-&lt;img src="imagem.jpg" alt="Avatar" class="avatar"&gt;
+    <pre><code>&lt;img src="assets/imgs/logo-primary.png" alt="Avatar" class="avatar avatar-lg"&gt;
+&lt;img src="assets/imgs/logo-white.png" alt="Avatar" class="avatar"&gt;
 &lt;div class="avatar avatar-sm"&gt;YL&lt;/div&gt;</code></pre>
 
     <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
@@ -904,10 +971,10 @@
     <pre><code>&lt;!-- Carrossel de Imagens Padrão --&gt;
 &lt;div class="carousel"&gt;
   &lt;div class="carousel-item"&gt;
-    &lt;img src="imagem1.jpg" alt="Slide 1"&gt;
+    &lt;img src="assets/imgs/logo-primary.png" alt="Slide 1"&gt;
   &lt;/div&gt;
   &lt;div class="carousel-item"&gt;
-    &lt;img src="imagem2.jpg" alt="Slide 2"&gt;
+    &lt;img src="assets/imgs/hero-background.png" alt="Slide 2"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 
@@ -979,7 +1046,7 @@
     </footer>
 
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.4/js/zenite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.6/js/zenite.min.js"></script>
 </body>
 
 </html>
