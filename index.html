@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zênite UI | FrameWork</title>
-  <link href="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.6/css/zenite.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.7/css/zenite.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -472,68 +472,74 @@
 
       <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
 
-      <h2>Formulários (Forms)</h2>
-      <p>Formulários são úteis para contatos ou inscrições. Todos os inputs são coloridos com o fundo secundário da
-        Zênite e brilham a dourado quando clicados.</p>
+      <h2>Formulários (Forms) e Validação</h2>
+      <p>Formulários são úteis para contatos ou inscrições. As mensagens de validação (sucesso ou erro) aparecem
+        automaticamente após a tentativa de envio do formulário.</p>
 
       <div class="card">
-        <form>
-          <label>Nome Completo</label>
-          <input type="text" name="nome" placeholder="Introduza o seu nome">
+        <form id="form-demo" novalidate>
 
-          <label>E-mail</label>
-          <input type="email" name="email" required placeholder="email@zenite.com">
-
-          <label>Tipo de Pedido:</label>
-          <div class="radio-group">
-            <label><input type="radio" name="tipo" value="vendas" checked> Vendas</label>
-            <label><input type="radio" name="tipo" value="suporte"> Suporte</label>
-            <label><input type="radio" name="tipo" value="faturacao"> Faturação</label>
+          <div>
+            <label>Nome Completo</label>
+            <input type="text" name="nome" required placeholder="Insira o seu nome">
+            <div class="valid-feedback">Nome válido!</div>
+            <div class="invalid-feedback">Por favor, insira o seu nome.</div>
           </div>
 
-          <label>Mensagem</label>
-          <textarea rows="4" placeholder="Como podemos ajudar?"></textarea>
+          <div>
+            <label>E-mail</label>
+            <input type="email" name="email" required placeholder="email@zenite.com">
+            <div class="valid-feedback">E-mail válido!</div>
+            <div class="invalid-feedback">Insira um e-mail válido.</div>
+          </div>
 
-          <div class="checkbox-group" style="margin-top: 1rem;">
-            <input type="checkbox" id="termos">
-            <label for="termos">Concordo com os <a href="javascript:void(0)">Termos e Condições</a></label>
+          <div>
+            <label>Tipo de Pedido:</label>
+            <div class="radio-group">
+              <label><input type="radio" name="tipo" value="vendas" checked> Vendas</label>
+              <label><input type="radio" name="tipo" value="suporte"> Suporte</label>
+              <label><input type="radio" name="tipo" value="faturacao"> Faturação</label>
+            </div>
+          </div>
+
+          <div>
+            <label>Mensagem</label>
+            <textarea rows="4" required placeholder="Como podemos ajudar?"></textarea>
+            <div class="valid-feedback">Tudo certo!</div>
+            <div class="invalid-feedback">A mensagem não pode estar vazia.</div>
+          </div>
+
+          <div>
+            <div class="checkbox-group" style="margin-top: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+              <input type="checkbox" id="termos" required>
+              <label for="termos">Concordo com os <a href="javascript:void(0)">Termos e Condições</a></label>
+
+              <div class="invalid-feedback" style="flex-basis: 100%; margin-top: 0.5rem; margin-bottom: 0;">Tem de
+                concordar com os termos para continuar.</div>
+            </div>
           </div>
 
           <div class="button-group">
-            <button type="button" class="button">Enviar Mensagem</button>
-            <button type="button" class="button button-outline" disabled>Limpar Formulário</button>
+            <button type="submit" class="button">Enviar Mensagem</button>
+            <button type="reset" class="button button-outline">Limpar Formulário</button>
           </div>
+
         </form>
       </div>
 
-      <pre><code>&lt;div class="card"&gt;
-  &lt;form&gt;
+      <pre><code>&lt;form id="form-demo" novalidate&gt;
+  &lt;!-- Agrupe cada campo dentro de uma div --&gt;
+  &lt;div&gt;
     &lt;label&gt;Nome Completo&lt;/label&gt;
-    &lt;input type="text" name="nome" placeholder="Introduza o seu nome"&gt;
+    &lt;input type="text" required placeholder="Insira o seu nome"&gt;
+    &lt;div class="valid-feedback"&gt;Nome válido!&lt;/div&gt;
+    &lt;div class="invalid-feedback"&gt;Por favor, insira o seu nome.&lt;/div&gt;
+  &lt;/div&gt;
 
-    &lt;label&gt;E-mail&lt;/label&gt;
-    &lt;input type="email" name="email" required placeholder="email@zenite.com"&gt;
+  &lt;!-- O botão tem de ser type="submit" --&gt;
+  &lt;button type="submit" class="button"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;</code></pre>
 
-    &lt;label&gt;Tipo de Pedido:&lt;/label&gt;
-    &lt;div class="radio-group"&gt;
-      &lt;label&gt;&lt;input type="radio" name="tipo" value="vendas" checked&gt; Vendas&lt;/label&gt;
-      &lt;label&gt;&lt;input type="radio" name="tipo" value="suporte"&gt; Suporte&lt;/label&gt;
-    &lt;/div&gt;
-
-    &lt;label&gt;Mensagem&lt;/label&gt;
-    &lt;textarea rows="4" placeholder="Como podemos ajudar?"&gt;&lt;/textarea&gt;
-
-    &lt;div class="checkbox-group" style="margin-top: 1rem;"&gt;
-      &lt;input type="checkbox" id="termos"&gt;
-      &lt;label for="termos"&gt;Concordo com os &lt;a href="javascript:void(0)"&gt;Termos e Condições&lt;/a&gt;&lt;/label&gt;
-    &lt;/div&gt;
-
-    &lt;div class="button-group"&gt;
-      &lt;button type="button" class="button"&gt;Enviar Mensagem&lt;/button&gt;
-      &lt;button type="button" class="button button-outline" disabled&gt;Limpar Formulário&lt;/button&gt;
-    &lt;/div&gt;
-  &lt;/form&gt;
-&lt;/div&gt;</code></pre>
 
       <hr style="border: none; border-top: 1px solid rgba(212, 175, 55, 0.2); margin: 3rem 0;">
 
@@ -1046,7 +1052,7 @@
     </footer>
 
   </div>
-  <script src="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.6/js/zenite.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/zenite-ui@1.1.7/js/zenite.min.js"></script>
 </body>
 
 </html>
